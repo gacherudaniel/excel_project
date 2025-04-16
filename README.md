@@ -1,2 +1,3 @@
-# excel_project
-This is a project to automate some processes in using excel files
+# Excel Report Generator
+
+A Streamlit app for generating daily production reports.
