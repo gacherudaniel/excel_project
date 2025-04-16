@@ -3,3 +3,7 @@
 *03 March  25 Gross Gen.xlsx
 *Daily production report March 2025.xlsx
 *Gross Gen. Summary 2025.xlsx
+
+__pycache__/
+*.py[cod]
+.env
