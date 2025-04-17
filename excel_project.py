@@ -7,7 +7,7 @@ from io import BytesIO
 from datetime import datetime
 
 
-def generate_daily_report(source_file, report_file, gross_wb, target_date_input):
+def generate_daily_report(source_file, report_file, gross_wb_, target_date_input):
 
     # === CONFIGURATION ===
 
@@ -110,7 +110,7 @@ def generate_daily_report(source_file, report_file, gross_wb, target_date_input)
 
     # === Write to Daily Report ===
     if mwh_value is not None:
-        report_file = "Daily production report March 2025.xlsx"
+        
         wb = load_workbook(report_file)
         
         # Check if a sheet with the given date_str exists
@@ -195,7 +195,7 @@ def generate_daily_report(source_file, report_file, gross_wb, target_date_input)
 
         # Step: Extract Annual MWH from Gross Gen Summary 2025
         try:
-            gross_wb = load_workbook("Gross Gen. Summary 2025.xlsx", data_only=True)
+            gross_wb = load_workbook(gross_wb_, data_only=True)
             gross_ws = gross_wb.active  # Or specify by name if needed: gross_wb["SomeSheetName"]
             annual_mwh_value = float(gross_ws["H17"].value)
             print(f"Annual MWH value extracted from H17: {annual_mwh_value}")

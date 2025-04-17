@@ -25,7 +25,7 @@ if st.button("Generate Report" , type ="primary"):
                 report_data = generate_daily_report(
                     source_file=uploaded_source,
                     report_file=uploaded_template,
-                    gross_wb=uploaded_annual,
+                    gross_wb_=uploaded_annual,
                     target_date_input=report_date
             )
             
