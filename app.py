@@ -6,11 +6,13 @@ import pandas as pd
 st.title("Daily Production Report Generator")
 
 # File uploaders
-uploaded_source = st.file_uploader("Upload Gross Generation File", type="xlsx")
-uploaded_template = st.file_uploader("Upload Daily production Report Template", type="xlsx") 
-uploaded_annual = st.file_uploader("Upload Gross Gen Summary File", type="xlsx")
+st.header("1. Upload Required Files")
+uploaded_source = st.file_uploader("Upload '03 March 25 Gross Gen.xlsx'", type="xlsx")
+uploaded_template = st.file_uploader("Upload 'Daily production report March 2025.xlsx'", type="xlsx") 
+uploaded_annual = st.file_uploader("Upload 'Gross Gen. Summary 2025.xlsx'", type="xlsx")
 
 # Date input
+st.header("2. Select Report Date")
 report_date = st.date_input("Select Report Date", datetime.today())
 
 if st.button("Generate Report" , type ="primary"):
