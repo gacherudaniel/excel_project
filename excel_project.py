@@ -16,7 +16,7 @@ def generate_daily_report(source_file, report_file, gross_wb, target_date_input)
     date_str = target_date.strftime("%dth %B")  # Formats as "9th March"
 
     # === Load Source Data ===
-    source_file = "03 March  25 Gross Gen.xlsx"
+    
     summary_df = pd.read_excel(source_file, sheet_name="Summary", header=None)
 
     # Make a full copy for lookups
@@ -217,8 +217,9 @@ def generate_daily_report(source_file, report_file, gross_wb, target_date_input)
     else:
         print("No data found for that date.")
 
-    # === Final output ===
+# === Final output ===
     output = BytesIO()
     wb.save(output)
     output.seek(0)  # Rewind the buffer
     return output
+    
